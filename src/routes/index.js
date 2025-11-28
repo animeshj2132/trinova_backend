@@ -14,6 +14,8 @@ import aiContentRoutes from './aiContentRoutes.js';
 import ourEdgeContentRoutes from './ourEdgeContentRoutes.js';
 import testimonialsContentRoutes from './testimonialsContentRoutes.js';
 import contactContentRoutes from './contactContentRoutes.js';
+import blogsContentRoutes from './blogsContentRoutes.js';
+import blogsRoutes from './blogsRoutes.js';
 
 const router = express.Router();
 
@@ -35,6 +37,8 @@ router.use('/ai-content', aiContentRoutes);
 router.use('/our-edge-content', ourEdgeContentRoutes);
 router.use('/testimonials-content', testimonialsContentRoutes);
 router.use('/contact-content', contactContentRoutes);
+router.use('/blogs-content', blogsContentRoutes);
+router.use('/blogs', blogsRoutes);
 
 // Health check
 router.get('/health', (req, res) => {
