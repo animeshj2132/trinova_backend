@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { testConnection } from './src/config/database.js';
 import bcrypt from 'bcryptjs';
 import { supabase } from './src/config/database.js';
+import { startHealthCheck } from './src/utils/healthCheck.js';
 
 dotenv.config();
 
@@ -27,6 +28,9 @@ const startServer = async () => {
       console.log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`🌐 API URL: http://localhost:${PORT}/api`);
       console.log(`\n✅ Backend is ready!\n`);
+      
+      // Start periodic health check (every 30 seconds)
+      startHealthCheck();
     });
   } catch (error) {
     console.error('❌ Failed to start server:', error);
