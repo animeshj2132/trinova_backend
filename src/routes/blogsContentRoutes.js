@@ -17,3 +17,4 @@ router.put('/admin/bulk', authenticate, requireAdmin, bulkUpdateBlogsContent);
 
 export default router;
 
+

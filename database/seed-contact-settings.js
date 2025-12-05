@@ -104,6 +104,7 @@ async function seedSiteConfig() {
     { config_key: 'twitter_url', config_value: '', config_type: 'text' },
     { config_key: 'linkedin_url', config_value: '', config_type: 'text' },
     { config_key: 'youtube_url', config_value: '', config_type: 'text' },
+    { config_key: 'whatsapp_url', config_value: '', config_type: 'text' },
 
     // Branding
     { config_key: 'header_logo_url', config_value: '', config_type: 'image' },
